@@ -6,11 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Meal extends Model
 {
-    class Meal extends Model
+    public function customer()
     {
-        public function customer()
-        {
-            return $this->belongsTo(Customer::class);
-        }
-}
+        return $this->belongsTo(Customer::class);
+    }
+
+    public function food()
+    {
+        return $this->belongsTo(Food::class);
+    }
 }

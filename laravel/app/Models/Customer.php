@@ -10,4 +10,8 @@ class Customer extends Model
     {
         return $this->hasMany(Meal::class);
     }
+
+    function activities() {
+        return $this->hasMany(Activity::class);
+    }
 }
